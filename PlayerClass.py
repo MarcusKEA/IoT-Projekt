@@ -3,7 +3,7 @@ import haversine
 class Player:
     """Class for hver enkelte GPS enhed"""
 
-    def __init__(self, nwBorder:tuple, seBorder:tuple):        
+    def __init__(self, nwBorder:tuple, seBorder:tuple):
         self.nwBorder = nwBorder
         self.seBorder = seBorder
         self.borders = []
