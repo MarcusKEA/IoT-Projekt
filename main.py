@@ -22,8 +22,8 @@ while True:
     try:
         
         lib.c.publish(topic=mapFeed, msg=GPSfunk.main())
-        #speed = GPSfunk.main()
-        #speed = speed[:4]
+        speed = GPSfunk.main()
+        speed = speed[:4]
         #print("speed: ",speed)
         print("Going Thourgh")
         lib.c.publish(topic=speedFeed, msg=speed)
