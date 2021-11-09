@@ -20,12 +20,14 @@ while True:
         else:
             lib.c.resubscribe()
     try:
+        
         lib.c.publish(topic=mapFeed, msg=GPSfunk.main())
-        speed = GPSfunk.main()
-        speed = speed[:4]
-        print("speed: ",speed)
+        #speed = GPSfunk.main()
+        #speed = speed[:4]
+        #print("speed: ",speed)
+        print("Going Thourgh")
         lib.c.publish(topic=speedFeed, msg=speed)
-        sleep(10) 
+        sleep(5) 
     # Stopper programmet når der trykkes Ctrl + c
     except KeyboardInterrupt:
         print('Ctrl-C pressed...exiting')

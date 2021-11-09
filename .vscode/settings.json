@@ -44,5 +44,7 @@
         ".micropy\\BradenM-micropy-stubs-ebac1d3\\stubs",
         ".micropy\\IoT_DUT"
     ],
-    "python.languageServer": "None"
+    //"python.languageServer": "None",
+    "python.linting.banditEnabled": false,
+    "python.languageServer": "Pylance"
 }
