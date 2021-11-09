@@ -1,0 +1,3 @@
+use Python 3.9 \python39\
+download from website .exe
+set path, clean not other snakes
