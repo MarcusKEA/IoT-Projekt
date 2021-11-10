@@ -1,7 +1,7 @@
 import haversine
 
-class Player:
-    """Class for hver enkelte GPS enhed"""
+class Zone:
+    """Class for hver enkelte zone"""
 
     def __init__(self, nwBorder:tuple, seBorder:tuple):
         self.nwBorder = nwBorder
@@ -18,11 +18,22 @@ class Player:
         print(borders)
         return borders
 
-player1 = Player((1,9), (7,3))
-player1Pos = [55.64266121248321, 12.612958544710214]
+class Player:
+    """Class for hver spiller/GPS enhed"""
+    def __init__(self, lat, lon):
+        self.lat = lat
+        self.lon = lon
+        self.pos = [lat,lon]
 
-nextBorderCal = haversine.makeZone(player1Pos,5,10)
+
+zone1 = Zone([1,9], (7,3))
+player1 = Player(55.64266121248321, 12.612958544710214)
+
+nextBorderCal = haversine.makeZone(player1.pos,5,10)
 
 #Længde og breddegrader for zone
-Player.calculate_borders(Player, nextBorderCal[0],nextBorderCal[1])
+Zone.calculate_borders(Zone, nextBorderCal[0],nextBorderCal[1])
+
+
+
 
